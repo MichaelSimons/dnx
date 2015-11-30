@@ -19,5 +19,6 @@ namespace Microsoft.Dnx.Runtime
         public const string PortablePdb = "DNX_BUILD_PORTABLE_PDB";
         public const string AspNetLoaderPath = "DNX_ASPNET_LOADER_PATH";
         public const string DnxDisableMinVersionCheck = "DNX_NO_MIN_VERSION_CHECK";
+        public const string RuntimeId = "DNX_RUNTIME_ID";
     }
 }

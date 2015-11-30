@@ -548,7 +548,15 @@ namespace Microsoft.Dnx.Tooling
             }
             else
             {
-                return FallbackRuntimes ?? Enumerable.Empty<string>();
+                var overrideRid = Environment.GetEnvironmentVariable(EnvironmentNames.RuntimeId);
+                if (!string.IsNullOrEmpty(overrideRid))
+                {
+                    return new[] { overrideRid };
+                }
+                else
+                {
+                    return FallbackRuntimes ?? Enumerable.Empty<string>();
+                }
             }
         }
 
